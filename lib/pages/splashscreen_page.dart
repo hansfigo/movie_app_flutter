@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
     });
 
     // Mulai notifikasi random
-    startRandomNotifications();
+    // startRandomNotifications();
 
     return const Scaffold(
       backgroundColor: Colors.blue, // Latar belakang biru
