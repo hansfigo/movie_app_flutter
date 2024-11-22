@@ -4,10 +4,13 @@ import 'package:hive/hive.dart';
 import 'package:encrypt/encrypt.dart' as encrypt;
 
 class AuthService {
+  // base url untuk API auth
   final String baseUrl = 'https://vertifyokay.vercel.app/dev/auth';
+
+  // Box buat simpen token
   final Box _authBox = Hive.box('authBox');
 
-  // // Kunci statis untuk enkripsi (gunakan kunci dengan panjang 32 byte untuk AES-256)
+  // // Kunci static buat enkripsi (pke kunci dengan panjang 32 byte untuk AES-256)
   final _encrypter = encrypt.Encrypter(encrypt.AES(
     encrypt.Key.fromUtf8('12345678901234567890123456789012'),
     mode: encrypt.AESMode.ecb,

@@ -6,6 +6,7 @@ class TicketPricePage extends StatefulWidget {
 }
 
 class _TicketPricePageState extends State<TicketPricePage> {
+  // Sample movie data
   final List<Map<String, dynamic>> _movies = [
     {
       'title': 'The Shawshank Redemption',
