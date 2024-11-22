@@ -1,7 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart'; // Import dotenv
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:movie_app/pages/feedback_page.dart';
+import 'package:movie_app/pages/profile_page.dart';
+import 'package:movie_app/pages/ticket_price_page.dart';
+import 'package:movie_app/pages/timezone_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -51,7 +55,10 @@ class _HomePageState extends State<HomePage> {
   // list pages
   final List<Widget> _pages = [
     HomePage(),
-    // Daftar halaman lainnya
+    TicketPricePage(),
+    TimezonePage(),
+    FeedbackPage(),
+    ProfilePage(),
   ];
 
   @override
@@ -77,12 +84,6 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.feedback), label: 'Feedback'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Trigger notifikasi manual
-        },
-        child: const Icon(Icons.notifications),
       ),
     );
   }
